@@ -35,12 +35,12 @@
     {
       "id": 7,
       "name": "Samsung s21",
-      "originalPrice": "30000000",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658383006/anhhtus/g5szhru8n2du0ltvb9tx.png",
+      "originalPrice": "29000000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659751643/anhhtus/btdgpq9igkk7uq8vincs.png",
+      "saleOffPrice": "22990000",
       "category": "Laptop",
       "feature": "bbbbbbbbbbb",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-      "saleOffPrice": "22990000",
       "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
@@ -66,15 +66,15 @@
       "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     },
     {
-      "name": "ASD2",
+      "id": 10,
+      "name": "Iphone 13 Pro White",
       "originalPrice": "2000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659581601/anhhtus/uhshustsbtkgnssppmsk.png",
       "saleOffPrice": "40000000000",
       "category": "Phụ kiện",
       "feature": "aaaaaaaaaaad",
-      "description": "ssssssssssszxcx",
-      "shortDescription": "aaaaaaaaaaaaaaaa",
-      "id": 10
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+      "shortDescription": "aaaaaaaaaaaaaaaa"
     }
   ]
 }

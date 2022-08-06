@@ -5,7 +5,7 @@ const UserHeader = {
       class="bg-[#D70018] max-w-full flex justify-center items-center space-x-24 py-2"
     >
       <div>
-        <img src="./public/images/logo.png" alt="" class="w-[30%]" />
+        <img src="../public/images/logo.png" alt="" class="w-[30%]" />
       </div>
       <form>
         <div class="relative">
@@ -43,18 +43,18 @@ const UserHeader = {
       <div class="flex space-x-6 text-white text-[14px] items-center">
         <p>Gọi mua hàng <br /><a href="#">1800.2097</a></p>
         <a href="#" class="flex space-x-2 items-center">
-          <img src="./public/images/address.png" alt="" class="" />
+          <img src="../public/images/address.png" alt="" class="" />
           <p href="#" class="">
             Cửa hàng <br />
             gần bạn
           </p>
         </a>
         <a href="#" class="flex space-x-2 items-center">
-          <img src="./public/images/ship.png" alt="" />
+          <img src="../public/images/ship.png" alt="" />
           <p>Tra cứu <br />đơn hàng</p>
         </a>
         <a href="#" class="flex space-x-2 items-center">
-          <img src="./public/images/cate.png" alt="" />
+          <img src="../public/images/cate.png" alt="" />
           <p>
             Giỏ <br />
             hàng
