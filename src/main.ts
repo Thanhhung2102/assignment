@@ -5,6 +5,8 @@ import AdminPage from './pages/Admin'
 import HomePage from './pages/Home'
 import AddProductPage from './pages/Admin/Product/add'
 import EditProductPage from './pages/Admin/Product/edit'
+import Signup from './pages/Auth/signup'
+import Signin from './pages/Auth/signin'
 
 const router = new Navigo('/', {linksSelector: "a"})
 
@@ -23,6 +25,12 @@ const print = async (component: ComponentBase, params?: any) => {
 router.on({
   "/": () => {
     print(HomePage)
+  },
+  "/signup": () => {
+    print(Signup)
+  },
+  "/signin": () => {
+    print(Signin)
   },
   "/admin": () => {
     print(AdminPage)

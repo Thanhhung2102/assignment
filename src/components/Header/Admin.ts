@@ -7,7 +7,7 @@ const AdminHeader = {
 							 		 <img src="/images/logo.png" alt="" class="w-[16%]" />
     								 <p class="text-white text-base pl-1 font-normal">Dashboard</p>
 							 </div>			
-							<form class="w-[40%]">   
+							<form class="w-[40%]">
 								<label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
 								<div class="relative">
 									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -17,7 +17,7 @@ const AdminHeader = {
 									<button type="submit" class="absolute right-2.5 bottom-2.5 font-medium rounded-lg text-sm px-4 py-2 "></button>
 								</div>
 							</form>
-							<p class="w-[40%] text-right text-white font-semibold text-[20px] pr-20">Xin Chào Trần Thanh Hùng</p>
+							<p class="w-[40%] text-right text-white font-semibold text-[20px] pr-20">Xin Chào, Trần Thanh Hùng</p>
                 </div>
             `
 		)

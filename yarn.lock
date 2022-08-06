@@ -35,7 +35,14 @@
   dependencies:
     "defer-to-connect" "^1.0.1"
 
-"@types/jquery@^3.5.14":
+"@types/jquery.validation@^1.16.7":
+  "integrity" "sha512-auRrFzVUOOg7jcLMGyEhvKAC84e8/Tu27wJXDLk3NZ0XCKGZWHYm7livBEjRs3LkB4vGnMKqWXBBnRpmCO9mhQ=="
+  "resolved" "https://registry.npmjs.org/@types/jquery.validation/-/jquery.validation-1.16.7.tgz"
+  "version" "1.16.7"
+  dependencies:
+    "@types/jquery" "*"
+
+"@types/jquery@*", "@types/jquery@^3.5.14":
   "integrity" "sha512-X1gtMRMbziVQkErhTQmSe2jFwwENA/Zr+PprCkF63vFq+Yt5PZ4AlKqgmeNlwgn7dhsXEK888eIW2520EpC+xg=="
   "resolved" "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.14.tgz"
   "version" "3.5.14"
