@@ -1,19 +1,25 @@
+import { relationships } from "../../api/category";
+import { getProduct } from "../../api/product";
 import Footer from "../../components/Footer";
 import UserHeader from "../../components/Header/User";
+import reRender from "../../ultilities/reRender";
 
 const DetailPage = {
-    render: () => {
+    render: async (id) => {
+      const {data : product} = await getProduct(id)
+      const {data : relationshipProduct} = await relationships(product.categoryId)
+      const productPopulate = relationshipProduct.products
         return `
            <header>
                 ${UserHeader.render()}
             </header>
              <h2 class="mb-4 py-3 border-[#D1D5DB] border pl-16 text-lg font-medium">
-                Samsung Galaxy A73 (5G) 256GB
+                ${product.name}
               </h2>
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-2">
         <div>
-          <img src="../public/images/product/a72.png" alt="" />
+          <img src="${product.image}" alt="" class="w-[55%]"/>
           <div class="mt-4 flex items-center space-x-2">
             <div
               class="flex flex-col items-center justify-center text-center border-[#D70018] border p-1 rounded-md"
@@ -37,14 +43,11 @@ const DetailPage = {
         </div>
         <div>
           <div>
-            <span class="text-2xl text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-sm ml-2">12.990.000 ₫</span>
+            <span class="text-2xl text-[#D70018]">${product.saleOffPrice} ₫</span>
+            <span class="text-[#707070] text-sm ml-2">${product.originalPrice} ₫</span>
           </div>
           <p class="mt-8 text-sm">
-            Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng
-            cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73,
-            Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm
-            giác sang trọng và tinh tế.
+            ${product.shortDescription}
           </p>
           <div class="mt-64 flex space-x-5">
             <button
@@ -64,46 +67,18 @@ const DetailPage = {
       </div>
       <h3 class="my-4">Sản phẩm cùng loại</h3>
       <div class="grid grid-cols-5 gap-8 place-items-center">
-        <div>
-          <img src="../public/images/product/2.png" alt="" />
-          <p>Iphone 13 Pro White 512 GB</p>
-          <div>
-            <span class="text-sm text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-xs ml-2">12.990.000 ₫</span>
-          </div>
-        </div>
-        <div>
-          <img src="../public/images/product/2.png" alt="" />
-          <p>Iphone 13 Pro White 512 GB</p>
-          <div>
-            <span class="text-sm text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-xs ml-2">12.990.000 ₫</span>
-          </div>
-        </div>
-        <div>
-          <img src="../public/images/product/2.png" alt="" />
-          <p>Iphone 13 Pro White 512 GB</p>
-          <div>
-            <span class="text-sm text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-xs ml-2">12.990.000 ₫</span>
-          </div>
-        </div>
-        <div>
-          <img src="../public/images/product/2.png" alt="" />
-          <p>Iphone 13 Pro White 512 GB</p>
-          <div>
-            <span class="text-sm text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-xs ml-2">12.990.000 ₫</span>
-          </div>
-        </div>
-        <div>
-          <img src="../public/images/product/2.png" alt="" />
-          <p>Iphone 13 Pro White 512 GB</p>
-          <div>
-            <span class="text-sm text-[#D70018]">11.690.000 ₫</span>
-            <span class="text-[#707070] text-xs ml-2">12.990.000 ₫</span>
-          </div>
-        </div>
+        ${productPopulate.map((item) => {
+            return `
+                <div>
+                  <img src="${item.image}" alt="" class="mx-auto"/>
+                  <p>${item.name}</p>
+                  <div>
+                    <span class="text-sm text-[#D70018]">${item.saleOffPrice} ₫</span>
+                    <span class="text-[#707070] text-xs ml-2">${item.originalPrice} ₫</span>
+                  </div>
+                </div>
+            `
+        }).join("")}
       </div>
       <div class="mt-6 mb-4 bg-[#F2F2F2] p-3">
         <h3 class="text-[#D70018] text-lg text-center">ĐẶC ĐIỂM NỔI BẬT</h3>
@@ -117,24 +92,7 @@ const DetailPage = {
         </p>
       </div>
       <p class="text-[15px]">
-        Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là
-        fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra
-        mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong
-        đó phải kể đến chiếc Samsung Galaxy A73 với nhiều cải tiến so với thế hệ
-        trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua
-        không? Tìm hiểu ngay nhé! Đánh giá Samsung A73 - Hiệu năng mượt mà, chụp
-        ảnh chuyên nghiệp Điện thoại cao cấp nhất dòng Galaxy A series sở hữu
-        nhiều nâng cấp đáng giá so với thế hệ trước, từ ngoại hình cho đến hiệu
-        năng, đặc biệt là hệ thống camera. Sau đây là những đánh giá chi tiết về
-        chiếc Thiết kế sang trọng, màn hình Super AMOLED Trước khi mua bất kỳ
-        chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm
-        trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ
-        ngoài mang đến cảm giác sang trọng và tinh tế. Samsung Galaxy A73 được
-        thiết kế gọn nhẹ với tiêu chí đáp ứng khả năng mang theo để tiện đi lại
-        cho người dùng. Giờ đây, bạn có thể mang theo chiếc smartphone bên cạnh
-        đến bất cứ đâu, bất cứ lúc nào. Kích thước và trọng lượng của chiếc điện
-        thoại rất vừa phải và dĩ nhiên sẽ không chiếm quá nhiều diện tích trong
-        túi xách và có thể di chuyển dễ dàng.
+        ${product.description}
       </p>
       <div class="flex justify-center items-center">
         <button
@@ -145,6 +103,16 @@ const DetailPage = {
     </div>
     ${Footer.render()}
         `
+    },
+    afterRender: () => {
+          const email = document.querySelector('#email');
+          const logout = document.querySelector('#logout');
+          email.innerHTML = JSON.parse(localStorage.getItem("user")).email
+          console.log(localStorage.getItem("user"));
+          logout.addEventListener('click', function(){
+              localStorage.removeItem("user");
+              reRender("header", DetailPage);
+          })
     }
 }
 export default DetailPage

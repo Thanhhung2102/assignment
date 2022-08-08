@@ -29,7 +29,7 @@ const Footer = {
           </div>
           <div>
             <p class="mb-2">Trung tâm bảo hành uỷ quyền Apple</p>
-            <img src="./public/images/sub-logo.png" alt="" />
+            <img src="../public/images/sub-logo.png" alt="" />
           </div>
         </div>
         <div class="flex flex-col">

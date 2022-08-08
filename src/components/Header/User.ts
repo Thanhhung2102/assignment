@@ -8,7 +8,7 @@ const UserHeader = {
       class="bg-[#D70018] max-w-full flex justify-center items-center space-x-24 py-2"
     >
       <div>
-        <img src="../public/images/logo.png" alt="" class="w-[30%]" />
+        <a href="/"><img src="../public/images/logo.png" alt="" class="w-[30%]" /></a>
       </div>
       <form>
         <div class="relative">
@@ -73,17 +73,5 @@ const UserHeader = {
     </header>
         `
     }
-    // afterRender: () => {
-    //   console.log("hiiii");
-      
-    //       const email = document.querySelector('#email');
-    //       const logout = document.querySelector('#logout');
-    //       email.innerHTML = JSON.parse(localStorage.getItem("user")).email
-    //       console.log(localStorage.getItem("user"));
-    //       logout.addEventListener('click', function(){
-    //           localStorage.removeItem("user");
-    //           reRender("header",UserHeader);
-    //       })
-    // }
 }
 export default UserHeader
