@@ -9,7 +9,7 @@ import Signup from './pages/Auth/signup'
 import Signin from './pages/Auth/signin'
 import DetailPage from './pages/Home/detail-page'
 
-const router = new Navigo('/', {linksSelector: "a"})
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
 export type ComponentBase = {
   render: (params) => Promise<string>;
@@ -22,6 +22,23 @@ const print = async (component: ComponentBase, params?: any) => {
     component.afterRender(params)
   }
 }
+
+router.on("/admin/*", () => {}, {
+    before(done, match) {
+        if(JSON.parse(localStorage.getItem('user'))){
+            const role = JSON.parse(localStorage.getItem('user')).role;
+            if(role == 1){
+                done();
+            } else {
+                document.location.href="/"
+            }
+        } else {
+            document.location.href="/"
+        }
+      
+      
+    }
+})
 
 router.on({
   "/": () => {

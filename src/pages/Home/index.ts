@@ -1,10 +1,13 @@
 import Footer from "../../components/Footer"
 import UserHeader from "../../components/Header/User"
+import reRender from "../../ultilities/reRender"
 
 const HomePage = {
     render: async () => {
         return /*html*/`
-            ${UserHeader.render()}
+           <header>
+                ${UserHeader.render()}
+            </header>
              <div class="flex justify-center space-x-16 max-w-7xl mx-auto mt-5 mb-12">
                 <ul class="w-[20%]">
                     <li class="mb-2">
@@ -747,6 +750,16 @@ const HomePage = {
     </div>
     ${Footer.render()}
         `
+    },
+    afterRender: () => {
+          const email = document.querySelector('#email');
+          const logout = document.querySelector('#logout');
+          email.innerHTML = JSON.parse(localStorage.getItem("user")).email
+          console.log(localStorage.getItem("user"));
+          logout.addEventListener('click', function(){
+              localStorage.removeItem("user");
+              reRender("header", HomePage);
+          })
     }
 }
 

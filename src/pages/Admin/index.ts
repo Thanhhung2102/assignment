@@ -3,6 +3,7 @@ import AdminHeader from "../../components/Header/Admin"
 import Sidebar from "../../components/Sidebar"
 import Product from "../../model/product"
 import reRender from "../../ultilities/reRender"
+import Swal from 'sweetalert2'
 
 const AdminPage = {
     render: async () => {
@@ -87,15 +88,34 @@ const AdminPage = {
     },
     afterRender: async () => {
       const btns = document.querySelectorAll("#btn-delete")
-      for( let btn of btns){
+      for(let btn of btns){
         const id = btn.dataset.id
         btn.addEventListener("click", async () => {
-            const confirm = window.confirm("Bạn có chắc muốn xóa không?")
-            if(confirm){
-                const data = await deleteProduct(id)
-                if(data) alert ("Xóa thành công")
-                reRender("#app" , AdminPage)
-            }
+            // const confirm = window.confirm("Bạn có chắc muốn xóa không?")
+            // if(confirm){
+            //     const data = await deleteProduct(id)
+            //     if(data) alert ("Xóa thành công")
+            //     reRender("#app" , AdminPage)
+            // }
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then(async (result) => {
+                if (result.isConfirmed) {
+                    await deleteProduct(id)
+                    reRender("#app" , AdminPage)
+                    Swal.fire(
+                    'Deleted!',
+                    'Your product has been deleted.',
+                    'success'
+                    )
+                }
+                })
         })
       }
     }

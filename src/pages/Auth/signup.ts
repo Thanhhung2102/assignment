@@ -34,6 +34,9 @@ const Signup = {
           >
             Đăng Ký
           </button>
+          <div class="flex justify-center items-center mt-8">
+             <a href="/signin" class="text-red-400 underline">Đăng nhập</a>
+         </div>
         </form>
         <div class="flex justify-center items-center">
           <img src="./public/images/anhhtus-logo 2.png" alt="" />
@@ -80,6 +83,7 @@ const Signup = {
             email : document.querySelector('#email')?.value,
             phone : document.querySelector('#phone')?.value,
             password : document.querySelector('#password')?.value,
+            role : 0
           }
             signup(user)
             alert("Đăng ký thành công")

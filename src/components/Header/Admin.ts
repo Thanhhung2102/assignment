@@ -17,7 +17,7 @@ const AdminHeader = {
 									<button type="submit" class="absolute right-2.5 bottom-2.5 font-medium rounded-lg text-sm px-4 py-2 "></button>
 								</div>
 							</form>
-							<p class="w-[40%] text-right text-white font-semibold text-[20px] pr-20">Xin Chào, Trần Thanh Hùng</p>
+							<p class="w-[40%] text-right text-white font-semibold text-[20px] pr-20">Xin Chào, Admin</p>
                 </div>
             `
 		)

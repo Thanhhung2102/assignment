@@ -4,10 +4,12 @@ import UserHeader from "../../components/Header/User";
 const DetailPage = {
     render: () => {
         return `
-            ${UserHeader.render()}
-             <h2 class="mb-4 py-3 border-[#D1D5DB] border">
-      Samsung Galaxy A73 (5G) 256GB
-    </h2>
+           <header>
+                ${UserHeader.render()}
+            </header>
+             <h2 class="mb-4 py-3 border-[#D1D5DB] border pl-16 text-lg font-medium">
+                Samsung Galaxy A73 (5G) 256GB
+              </h2>
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-2">
         <div>

@@ -2,33 +2,23 @@
   "users": [
     {
       "email": "hungttph13998@fpt.edu.vn",
-      "password": "$2a$10$M0qxuU3zeleJxVY0iP4m4.unTGI/ou6aEJOmOFc734M7Limffmeba",
+      "password": "$2a$10$cEDB8VFcS1rSFZCsttn/JuzIk3hw6plI8Xq28.3Cb27v/Yv1gT6vS",
       "phone": "0345678567",
       "id": 1
     },
     {
       "email": "admin@gmail.com",
-      "password": "$2a$10$9q3v.Sk4CiN0upu45okXyO.f0O1zzt5v7jHAv3zqhaMzd07aRlvAi",
-      "phone": "0345678567",
+      "password": "$2a$10$rdb68PZ5evTlx2B6wBEceeVKSaUvLf3.vSEbUK9gxrOz.r3x87ze6",
+      "phone": "0345968543",
+      "role": 1,
       "id": 2
     },
     {
-      "email": "hungttph1392298@fpt.edu.vn",
-      "password": "$2a$10$lquXHHN2QL3T9r/6UPG/fuv/qEBDXrdqjA4tpUlJhzUC2voYWkyya",
-      "phone": "0345968543",
-      "id": 3
-    },
-    {
-      "email": "user1@gmail.com",
-      "password": "$2a$10$Dvv.mUVUGO.uN1eiH3QIYO2x6shquZNOPnrjaWt7qcOxNKezLzDPa",
-      "phone": "0985672187",
-      "id": 4
-    },
-    {
       "email": "hungtt@fpt.edu.vn",
-      "password": "$2a$10$kznl14jKERpIKNUuxHPk9uF1MX45bA5qZ0qioZL95KTlAOgyvTVBq",
-      "phone": "0345968543",
-      "id": 5
+      "password": "$2a$10$pQI7BL1zs708Havp7qw45uUFYNlz9Lb6Xmr.zeVkXr8iX3HSmjNqu",
+      "phone": "0345678567",
+      "role": 0,
+      "id": 3
     }
   ],
   "products": [
@@ -64,17 +54,6 @@
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
       "saleOffPrice": "19000000",
       "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    },
-    {
-      "id": 10,
-      "name": "Iphone 13 Pro White",
-      "originalPrice": "2000000",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659581601/anhhtus/uhshustsbtkgnssppmsk.png",
-      "saleOffPrice": "40000000000",
-      "category": "Phụ kiện",
-      "feature": "aaaaaaaaaaad",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-      "shortDescription": "aaaaaaaaaaaaaaaa"
     }
   ]
 }

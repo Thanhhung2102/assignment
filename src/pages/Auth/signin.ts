@@ -35,6 +35,9 @@ const Signin = {
               ><img src="./public/images/gg.png" alt="" class="w-[80%]"
             /></a>
           </div>
+          <p class="text-center mt-3">Bạn chưa có tài khoản? <a href="/signup" class="text-red-400 font-medium inline-flex space-x-1 items-center"><span>Đăng Ký tài khoản mới </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg></span></a></p>
         </form>
         <div class="flex justify-center items-center pb-24">
           <img src="./public/images/anhhtus-logo 2.png" alt="" />
@@ -54,10 +57,15 @@ const Signin = {
             password: document.querySelector("#password")?.value
           }
           const result = await signin(user)
-          if(result){
-            alert("Đăng nhập thành công")
+          console.log(result.data.user);
+          localStorage.setItem("user", JSON.stringify(result.data.user))
+          if(result.data.user.role == 1){
+            document.location.href="/admin"
+            } else {
+                document.location.href="/"
+            }
           }
-        } catch (error) {
+         catch (error) {
           alert("Sai tài khoản hoặc mật khẩu")
         }
       })

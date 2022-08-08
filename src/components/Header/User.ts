@@ -1,5 +1,8 @@
+import reRender from "../../ultilities/reRender";
+
 const UserHeader = {
     render: () => {
+      // console.log(JSON.parse(localStorage.getItem("user")).email);
         return `
                 <header
       class="bg-[#D70018] max-w-full flex justify-center items-center space-x-24 py-2"
@@ -60,9 +63,27 @@ const UserHeader = {
             hàng
           </p>
         </a>
+        
+            ${localStorage.getItem("user") ? `
+                        <a class="block px-4 py-3 hover:bg-white hover:text-red-500 text-base cursor-default" id="email"></a>
+                        <a class="block px-4 py-3 hover:bg-white hover:text-red-500 cursor-default" id="logout">Logout</a>
+        `: `<a href="/signin" class="">Đăng nhập</a>`}
+       
       </div>
     </header>
         `
     }
+    // afterRender: () => {
+    //   console.log("hiiii");
+      
+    //       const email = document.querySelector('#email');
+    //       const logout = document.querySelector('#logout');
+    //       email.innerHTML = JSON.parse(localStorage.getItem("user")).email
+    //       console.log(localStorage.getItem("user"));
+    //       logout.addEventListener('click', function(){
+    //           localStorage.removeItem("user");
+    //           reRender("header",UserHeader);
+    //       })
+    // }
 }
 export default UserHeader
