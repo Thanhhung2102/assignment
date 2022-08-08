@@ -28,32 +28,116 @@
       "originalPrice": "29000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659751643/anhhtus/btdgpq9igkk7uq8vincs.png",
       "saleOffPrice": "22990000",
-      "category": "Laptop",
-      "feature": "bbbbbbbbbbb",
+      "categoryId": 2,
+      "feature": "Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với cảm biến chính lên đến 108 MP\nThưởng thức không gian giải trí cực đỉnh - Màn hình lớn 6.7 inch, độ phân giải Full HD+, 120Hz mượt mà\nCấu hình Galaxy A73 5G được nâng cấp mạnh với chip Snapdragon 778G, RAM lên đến 8 GB\nChiến game thoải mái không lo gián đoạn - Viên pin lớn 5000 mAh, hỗ trợ sạc nhanh 25 W",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-      "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      "shortDescription": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ"
     },
     {
-      "name": "Iphone 13",
+      "id": 8,
+      "name": "Iphone 13 Pro Bue",
       "originalPrice": "25000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658383053/anhhtus/fi7vxucwl8btdg1npfm7.png",
       "saleOffPrice": "21000000",
-      "category": "Điện thoại",
-      "feature": "cccccccccccccccccccccc",
+      "categoryId": 1,
+      "feature": "Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 3 camera với cảm biến chính lên đến 108 MP\nThưởng thức không gian giải trí cực đỉnh - Màn hình lớn 6.3 inch, độ phân giải Full HD+, 120Hz mượt mà\n",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-      "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-      "id": 8
+      "shortDescription": "Thu cũ lên đời - Trợ giá 1 triệu"
     },
     {
       "id": 9,
-      "name": "Iphone 13 ",
+      "name": "Iphone 13 Pro Pink",
       "originalPrice": "60000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658383486/anhhtus/thdo8y6ouqqjsuo1poyu.png",
-      "category": "Laptop",
-      "feature": " type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
       "saleOffPrice": "19000000",
-      "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      "categoryId": 1,
+      "feature": " Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản Iphone 13 Pro Pink, Apple đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+      "shortDescription": "Thu cũ lên đời - Trợ giá 1 triệu"
+    },
+    {
+      "id": 10,
+      "name": "Samsung S22 Plus",
+      "originalPrice": "20190000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659968723/anhhtus/nmvsmhgwglakyemhqmxg.png",
+      "saleOffPrice": "19290000",
+      "categoryId": 2,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản S22, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Samsung S22 Plus với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ"
+    },
+    {
+      "id": 11,
+      "name": "Oppo Reno 6",
+      "originalPrice": "9490000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659968886/anhhtus/kyqh0rzmzkcgrvbqhtcr.png",
+      "saleOffPrice": "6790000",
+      "categoryId": 3,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản Oppo Reno 6, Oppo đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Oppo Reno 6 với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "Thu cũ lên đời - Trợ giá 1 triệu"
+    },
+    {
+      "id": 12,
+      "name": "Redmi 10",
+      "originalPrice": "20190000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659970769/anhhtus/ruwkfxmg4e6myzri46zy.png",
+      "saleOffPrice": "19290000",
+      "categoryId": 4,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản Redmi 10, Xiaomi đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Xiaomi . Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Redmi 10 với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ"
+    },
+    {
+      "id": 13,
+      "name": "Oppo Reno 6",
+      "originalPrice": "9490000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659968886/anhhtus/kyqh0rzmzkcgrvbqhtcr.png",
+      "saleOffPrice": "6790000",
+      "categoryId": 3,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản Oppo Reno 6, Oppo đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Oppo Reno 6 với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "Thu cũ lên đời - Trợ giá 1 triệu"
+    },
+    {
+      "id": 14,
+      "name": "Samsung S22 Plus",
+      "originalPrice": "20190000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659968723/anhhtus/nmvsmhgwglakyemhqmxg.png",
+      "saleOffPrice": "19290000",
+      "categoryId": 2,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản S22, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Samsung S22 Plus với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ"
+    },
+    {
+      "id": 15,
+      "name": "Oppo Reno 6",
+      "originalPrice": "9490000",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659968886/anhhtus/kyqh0rzmzkcgrvbqhtcr.png",
+      "saleOffPrice": "6790000",
+      "categoryId": 3,
+      "feature": "Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản Oppo Reno 6, Oppo đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Oppo Reno 6 với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!",
+      "shortDescription": "Thu cũ lên đời - Trợ giá 1 triệu"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Iphone  "
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "name": "Oppo",
+      "id": 3
+    },
+    {
+      "name": "Xiaomi",
+      "id": 4
     }
   ]
 }

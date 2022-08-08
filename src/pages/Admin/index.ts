@@ -4,12 +4,14 @@ import Sidebar from "../../components/Sidebar"
 import Product from "../../model/product"
 import reRender from "../../ultilities/reRender"
 import Swal from 'sweetalert2'
+import { getAllCate, relationships } from "../../api/category"
 
 const AdminPage = {
     render: async () => {
+        const {data} = await getAllCate();
         const res = await getProducts()
-        const data: Product[] = res.data
-        console.log(data)
+        const product: Product[] = res.data
+        console.log(product)
         return /*html*/`
         ${AdminHeader.render()}
         <div class="flex mt-4 divide-x">
@@ -29,11 +31,12 @@ const AdminPage = {
                     <p class="text-[13px] font-semibold flex-2">Bộ lọc : </p>
                     <div class="ml-10 flex-1">
                         <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Danh mục sản phẩm</label>
-                        <select id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[40%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option value="1">Laptop</option>
-                        <option value="2">Máy tính bảng</option>
-                        <option value="3">Phụ kiện</option>
-                        <option value="4">Âm thanh</option>
+                        <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[40%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        ${data.map((item) => {
+                            return `
+                            <option selected hidden></option>
+                            <option value="${item.id}">${item.name}</option>`
+                        }).join("")}
                         </select>
                     </div>
                 </div>
@@ -50,7 +53,7 @@ const AdminPage = {
                     </tr>
                     </thead>
                     <tbody>
-                    ${data.map((p, index) => /*html*/`
+                    ${product.map((p, index) => /*html*/`
                         <tr>
                             <td class="border text-center p-3">${index + 1}</td>
                             <td class="border p-3">${p.name}</td>
@@ -87,37 +90,36 @@ const AdminPage = {
         `
     },
     afterRender: async () => {
-      const btns = document.querySelectorAll("#btn-delete")
-      for(let btn of btns){
-        const id = btn.dataset.id
-        btn.addEventListener("click", async () => {
-            // const confirm = window.confirm("Bạn có chắc muốn xóa không?")
-            // if(confirm){
-            //     const data = await deleteProduct(id)
-            //     if(data) alert ("Xóa thành công")
-            //     reRender("#app" , AdminPage)
-            // }
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-                }).then(async (result) => {
-                if (result.isConfirmed) {
-                    await deleteProduct(id)
-                    reRender("#app" , AdminPage)
-                    Swal.fire(
-                    'Deleted!',
-                    'Your product has been deleted.',
-                    'success'
-                    )
-                }
-                })
+        const category = document.querySelector("#category")
+        category?.addEventListener('change', async function () {
+            const id = category.value;
+            location.pathname = `/admin/categories/${id}/list`
         })
-      }
+        const btns = document.querySelectorAll("#btn-delete")
+        for(let btn of btns){
+            const id = btn.dataset.id
+            btn.addEventListener("click", async () => {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                    }).then(async (result) => {
+                    if (result.isConfirmed) {
+                        await deleteProduct(id)
+                        reRender("#app" , AdminPage)
+                        Swal.fire(
+                        'Deleted!',
+                        'Your product has been deleted.',
+                        'success'
+                        )
+                    }
+                    })
+            })
+        }
     }
 }
 

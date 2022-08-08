@@ -1,3 +1,4 @@
+import { getAllCate } from "../../../api/category";
 import { upload } from "../../../api/image";
 import { getProduct, updateProduct } from "../../../api/product";
 import AdminHeader from "../../../components/Header/admin";
@@ -7,6 +8,7 @@ import Product from "../../../model/product";
 const EditProductPage = {
     render: async (id) => {
 		const product = await getProduct(id);
+        const { data } = await getAllCate()
 		const products: Product[] = product.data
         return /*html*/`
         ${AdminHeader.render()}
@@ -51,12 +53,10 @@ const EditProductPage = {
                     </div>
                     <div class="flex flex-col mt-4">
                         <label for="">Danh mục:</label>
-                        <select name="" id="category" class="w-full border rounded-sm h-10">
-                            <option>${products.category}</option>
-                            <option value="iphone">Iphone</option>
-                            <option value="samsung">Samsung</option>
-                            <option value="xiaomi">Xiaomi</option>
-                            <option value="oppo">Oppo</option>
+                        <select value="" id="category" class="w-full border rounded-sm h-10">
+                          ${data.map((item) => {
+                            return `<option value="${item.id}">${item.name}</option>`
+                        }).join("")}
                         </select>
                     </div>
                     <div class="flex flex-col mt-4">
@@ -119,16 +119,13 @@ const EditProductPage = {
                 originalPrice : document.querySelector('#originalPrice')?.value,
                 image : previewImage?.src,
                 saleOffPrice : document.querySelector('#saleOffPrice')?.value,
-                category : document.querySelector('#category')?.value,
+                categoryId : parseInt(document.querySelector('#category')?.value),
                 feature : document.querySelector('#feature')?.value,
                 description : document.querySelector('#description')?.value,
                 shortDescription : document.querySelector('#shortDescription')?.value,
             }
                 updateProduct(product)
                 console.log(product);
-                
-                // alert('Sửa thành công')
-                // location.href = "/admin"
             }
         })
 

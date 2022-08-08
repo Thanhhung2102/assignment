@@ -8,6 +8,10 @@ import EditProductPage from './pages/Admin/Product/edit'
 import Signup from './pages/Auth/signup'
 import Signin from './pages/Auth/signin'
 import DetailPage from './pages/Home/detail-page'
+import CategoryPage from './pages/Admin/Category/category'
+import AddCategoryPage from './pages/Admin/Category/category-add'
+import EditCategoryPage from './pages/Admin/Category/category-update'
+import CategoryList from './pages/Admin/Category/category-list'
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -61,6 +65,18 @@ router.on({
   },
   "/admin/products/:id/edit": (data) => {
     print(EditProductPage , data.data.id)
+  },
+   "/admin/categories": () => {
+    print(CategoryPage)
+  },
+  "/admin/categories/:id/list": (data) => {
+    print(CategoryList, data.data.id)
+  },
+  "/admin/categories/add": () => {
+    print(AddCategoryPage)
+  },
+  "/admin/categories/:id/edit": (data) => {
+    print(EditCategoryPage , data.data.id)
   },
 })
 router.resolve()

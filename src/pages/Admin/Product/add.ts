@@ -1,3 +1,4 @@
+import { getAllCate } from "../../../api/category"
 import { upload } from "../../../api/image"
 import { createProduct } from "../../../api/product"
 import AdminHeader from "../../../components/Header/Admin"
@@ -6,6 +7,9 @@ import Product from "../../../model/product"
 
 const AddProductPage = {
     render: async () => {
+        const { data } = await getAllCate()
+        console.log(data);
+        
         return /*html*/`
         ${AdminHeader.render()}
         <div class="flex mt-4">
@@ -51,11 +55,9 @@ const AddProductPage = {
                     <div class="mb-4">
                         <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Danh mục sản phẩm</label>
                         <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[100%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option value="Laptop">Laptop</option>
-                        <option value="Máy tính bảng">Máy tính bảng</option>
-                        <option value="Phụ kiện">Phụ kiện</option>
-                        <option value="Âm thanh">Âm thanh</option>
-                        <option value="Điện thoại">Điện thoại</option>
+                        ${data.map((item) => {
+                            return `<option value="${item.id}">${item.name}</option>`
+                        }).join("")}
                         </select>
                     </div>
                     </div>
@@ -116,12 +118,12 @@ const AddProductPage = {
                 const name = document.querySelector('#name')?.value
                 const originalPrice = document.querySelector('#originalPrice')?.value
                 const saleOffPrice = document.querySelector('#promotion-price')?.value
-                const category = document.querySelector("#category")?.value
+                const categoryId = parseInt(document.querySelector("#category")?.value)
                 const shortDescription = document.querySelector('#short-description')?.value
                 const description = document.querySelector('#long-description')?.value
                 const feature = document.querySelector('#salient-features')?.value
                 const image = previewImage?.src
-                const product = new Product(name, originalPrice, image, category, feature, description, saleOffPrice, shortDescription)
+                const product = new Product(name, originalPrice, image, categoryId, feature, description, saleOffPrice, shortDescription)
                 try {
                     const data = await createProduct(product)
                     if(data) alert("Thêm thành công")
@@ -131,25 +133,6 @@ const AddProductPage = {
                 }
             }
         })
-
-        //     addProductBtn?.addEventListener('click', async (e) => {
-        //     const name = document.querySelector('#name')?.value
-        //     const originalPrice = document.querySelector('#originalPrice')?.value
-        //     const saleOffPrice = document.querySelector('#promotion-price')?.value
-        //     const category = document.querySelector("#category")?.value
-        //     const shortDescription = document.querySelector('#short-description')?.value
-        //     const description = document.querySelector('#long-description')?.value
-        //     const feature = document.querySelector('#salient-features')?.value
-        //     const image = previewImage?.src
-        //     const product = new Product(name, originalPrice, image, category, feature, description, saleOffPrice, shortDescription)
-        //     try {
-        //         const data = await createProduct(product)
-        //         if(data) alert('Thêm mới thành công')
-        //         location.href = "/admin"
-        //     } catch(err) {
-        //         console.log(err)
-        //     }
-        // })
 
         inputFile?.addEventListener('change', async (e) => {
             // console.log(e.target.files)

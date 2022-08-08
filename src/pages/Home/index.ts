@@ -1,9 +1,12 @@
+import { getProducts } from "../../api/product"
 import Footer from "../../components/Footer"
 import UserHeader from "../../components/Header/User"
 import reRender from "../../ultilities/reRender"
 
 const HomePage = {
     render: async () => {
+      const {data : product } = await getProducts()
+      console.log(product);
         return /*html*/`
            <header>
                 ${UserHeader.render()}

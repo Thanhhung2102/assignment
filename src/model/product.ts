@@ -3,7 +3,7 @@ class Product {
     originalPrice: number;
     image: string;
     saleOffPrice?: number;
-    category?: string;
+    categoryId?: number;
     feature?: string;
     description?: string;
     shortDescription?: string;
@@ -11,7 +11,7 @@ class Product {
         name: string,
         originalPrice: number,
         image: string,
-        category?: string,
+        categoryId?: number,
         feature?: string,
         description?: string,
         saleOffPrice?:number,
@@ -21,7 +21,7 @@ class Product {
         this.originalPrice = originalPrice;
         this.image = image;
         this.saleOffPrice = saleOffPrice;
-        this.category = category;
+        this.categoryId = categoryId;
         this.feature = feature;
         this.description = description;
         this.shortDescription = shortDescription;
