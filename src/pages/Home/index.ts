@@ -306,6 +306,7 @@ const HomePage = {
           const logout = document.querySelector('#logout');
           email.innerHTML = JSON.parse(localStorage.getItem("user")).email
           console.log(localStorage.getItem("user"));
+          console.log(JSON.parse(localStorage.getItem("user")).role);
           logout.addEventListener('click', function(){
               localStorage.removeItem("user");
               reRender("header", HomePage);

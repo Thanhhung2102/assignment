@@ -1,4 +1,5 @@
 import { signup } from "../../api/user";
+import User from "../../model/user";
 
 
 const Signup = {
@@ -79,12 +80,11 @@ const Signup = {
         }
       },
       submitHandler: async function(){
-          const user = {
-            email : document.querySelector('#email')?.value,
-            phone : document.querySelector('#phone')?.value,
-            password : document.querySelector('#password')?.value,
-            role : 0
-          }
+            const email = document.querySelector('#email')?.value
+            const phone = document.querySelector('#phone')?.value
+            const password = document.querySelector('#password')?.value
+            const role = 0
+            const user = new User(email,phone,password,role)
             signup(user)
             alert("Đăng ký thành công")
             location.href = "/signin"

@@ -63,7 +63,6 @@ const UserHeader = {
             hàng
           </p>
         </a>
-        
             ${localStorage.getItem("user") ? `
                         <a class="block px-4 py-3 hover:bg-white hover:text-red-500 text-base cursor-default" id="email"></a>
                         <a class="block px-4 py-3 hover:bg-white hover:text-red-500 cursor-default" id="logout">Logout</a>

@@ -19,6 +19,13 @@
       "phone": "0345678567",
       "role": 0,
       "id": 3
+    },
+    {
+      "email": "hungtt@gmail.com",
+      "password": "$2a$10$JVROVSLnhqIZino.253GD.7jUbGK2.xxyNxSaITJ1fHFYKmqCfJu6",
+      "phone": "0345968543",
+      "role": 0,
+      "id": 4
     }
   ],
   "products": [
@@ -35,7 +42,7 @@
     },
     {
       "id": 8,
-      "name": "Iphone 13 Pro Bue",
+      "name": "iPhone 13 Pro Max 128GB | Chính hãng VN/A",
       "originalPrice": "25000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658383053/anhhtus/fi7vxucwl8btdg1npfm7.png",
       "saleOffPrice": "21000000",
@@ -46,7 +53,7 @@
     },
     {
       "id": 9,
-      "name": "Iphone 13 Pro Pink",
+      "name": "iPhone 13 128GB | Chính hãng VN/A",
       "originalPrice": "60000000",
       "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658383486/anhhtus/thdo8y6ouqqjsuo1poyu.png",
       "saleOffPrice": "19000000",

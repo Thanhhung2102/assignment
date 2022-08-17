@@ -28,20 +28,18 @@ const print = async (component: ComponentBase, params?: any) => {
 }
 
 router.on("/admin/*", () => {}, {
-    before(done, match) {
-        if(JSON.parse(localStorage.getItem('user'))){
-            const role = JSON.parse(localStorage.getItem('user')).role;
-            if(role == 1){
-                done();
-            } else {
-                document.location.href="/"
-            }
-        } else {
-            document.location.href="/"
-        }
-      
-      
+  before(done,match){
+    if(JSON.parse(localStorage.getItem("user"))){
+      const role = JSON.parse(localStorage.getItem("user")).role
+      if(role == 1){
+        done()
+      }else{
+        document.location.href = "/"
+      }
+    }else{
+      document.location.href = "/"
     }
+  }
 })
 
 router.on({
